@@ -1,4 +1,3 @@
-
 ## Code du script corrigé Main.ps1
 
 #Q2.2 Lors de l'exécution de script, nous en sortons directement. Il faut alors modifier ce qui suit *ArgumentList et écrire "C:\Scripts\AddLocalUsers.ps1" au lieu de "C:\Temp\AddLocalUsers.ps1". Le chemin n'étant pas le bon, il ne trouvait tout simplement pas le fichier du script
@@ -8,8 +7,17 @@
 Start-Process -FilePath "powershell.exe" -ArgumentList 'C:\Scripts\AddLocalUsers.ps1' -Verb RunAs -WindowStyle Maximized
 
 
-## Code du script corrigé AddLocalUsers.ps1
 
+
+
+
+
+
+
+
+
+
+## Code du script corrigé AddLocalUsers.ps1
 
 Write-Host "--- Début du script ---"
 
