@@ -1,29 +1,14 @@
-### Q2.2
-Lors de l'exécution de script, nous en sortons directement. Il faut alors modifier ce qui suit *ArgumentList et écrire "C:\Scripts\AddLocalUsers.ps1" au lieu de "C:\Temp\AddLocalUsers.ps1". Le chemin n'étant pas le bon, il ne trouvait tout simplement pas le fichier du script
 
-### Q2.3
-``-Verb RunAs`` permet d'exécuter le script avec les privilèges d'administrateur.
+## Code du script corrigé Main.ps1
 
-### Q2.4
-``-WindowsStyle Maximized`` permet d'ouvrir la fenêtre en grand lors de l'exécution du script.
+#Q2.2 Lors de l'exécution de script, nous en sortons directement. Il faut alors modifier ce qui suit *ArgumentList et écrire "C:\Scripts\AddLocalUsers.ps1" au lieu de "C:\Temp\AddLocalUsers.ps1". Le chemin n'étant pas le bon, il ne trouvait tout simplement pas le fichier du script
+#Q2.3 ``-Verb RunAs`` permet d'exécuter le script avec les privilèges d'administrateur.
+#Q2.4 ``-WindowsStyle Maximized`` permet d'ouvrir la fenêtre en grand lors de l'exécution du script.
 
-### Q2.5
-Il est ignoré à cause de l'option ``-Skip 2``. Il nous suffit d'enlever cela.
-
-### Q2.6
-Il n'est pas utilisé car lors de la boucle de création d'utilisateurs nous n'avons pas de varibale $Description qui pourrait inclure la description de l'individu. Nous le corrigeons en la créant.
-
-### Q2.9
-Nous copions le fichier texte pour coller la fonction au début de notre script AddLocalUsers.ps1 (i.e. avant l'appel de variables).
-On appelle ensuite cette fonction dans notre script, en utilisant simplement som 'nom', ici Log.
-
-### Q2.16
-La fonction ``ManageAccentsAndCapitalLetters`` permet de remplacer les caractères 'spéciaux' qui pourrait provenir de noms, prénoms, attributs "exotiques" pour des caractères compris par la machine lors de l'exécution du script pour simplifier.
-Ici nous avons l'exemple de Styrbjörn Colin avec le "ö" (remplacé dans la fonction par "o")
+Start-Process -FilePath "powershell.exe" -ArgumentList 'C:\Scripts\AddLocalUsers.ps1' -Verb RunAs -WindowStyle Maximized
 
 
-
-## Code du script corrigé
+## Code du script corrigé AddLocalUsers.ps1
 
 
 Write-Host "--- Début du script ---"
@@ -40,7 +25,8 @@ Function Random-Password ($length = 12)
     Return $password.ToString()
 }
 
-#Fonction qui enlève les carac. spéciaux
+#Q 2.16 La fonction ``ManageAccentsAndCapitalLetters`` permet de remplacer les caractères 'spéciaux' qui pourrait provenir de noms, prénoms, attributs "exotiques" pour des caractères compris par la machine lors de l'exécution du script pour simplifier.
+#Ici nous avons l'exemple de Styrbjörn Colin avec le "ö" (remplacé dans la fonction par "o")
 Function ManageAccentsAndCapitalLetters
 {
     param ([String]$String)
@@ -50,7 +36,8 @@ Function ManageAccentsAndCapitalLetters
     $StringWithoutAccentAndCapitalLetters
 }
 
-#Prise de logs
+#Q2.9 Nous copions le fichier texte pour coller la fonction au début de notre script AddLocalUsers.ps1 (i.e. avant l'appel de variables).
+#On appelle ensuite cette fonction dans notre script, en utilisant simplement som 'nom', ici Log.
 Function Log
 {
     param([string]$FilePath,[string]$Content)
@@ -75,6 +62,7 @@ $Path = "C:\Scripts"
 $CsvFile = "$Path\Users.csv"
 $LogFile = "$Path\Log.log"
 
+#Q2.5 Il est ignoré à cause de l'option ``-Skip 2``. Il nous suffit d'enlever cela.
 $Users = Import-Csv -Path $CsvFile -Delimiter ";" -Header "prenom","nom","description" -Encoding UTF8
 
 foreach ($User in $Users)
@@ -82,7 +70,7 @@ foreach ($User in $Users)
     $Prenom = ManageAccentsAndCapitalLetters -String $User.prenom
     $Nom = ManageAccentsAndCapitalLetters -String $User.Nom
     $Name = "$Prenom.$Nom"
-    #Add variable description
+    #Q2.6 Il n'est pas utilisé car lors de la boucle de création d'utilisateurs nous n'avons pas de varibale $Description qui pourrait inclure la description de l'individu. Nous le corrigeons en la créant.
     $Description = ManageAccentsAndCapitalLetters -String $User.description
     If (-not(Get-LocalUser -Name "$Name" -ErrorAction SilentlyContinue))
     {
