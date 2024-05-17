@@ -23,7 +23,8 @@ On désactive l'IPv6 en graphique. On observe ensuite que le ping pas toujours m
 ![](https://github.com/Magicmaggio/Checkpoint-2/blob/main/ressources_images/Exercice%201/dhcp_client.jpg)
 
 ### Q1.5
-La toute première adresse du réseau est réservée pour l'adresse réseau. Ensuite les configurations DHCP peuvent allouer des plages précises pour les matériels qui rejoignent son autorité. Dans notre cas, sur le serveur (qui à le rôle DHCP) nous voyons quand dans la plage 172.16.10.1 - 172.16.10.254, la 'sous-plage' 172.16.10.1 - 172.16.10.19' est exclue pour l'attribution des adresses, donc, notre client recevra la première adresse après cette plage d'exclusion. Ici 172.16.10.20.
+La toute première adresse du réseau est réservée pour l'adresse réseau. Ensuite les configurations DHCP peuvent allouer des plages précises pour les matériels qui rejoignent son autorité. Dans notre cas, sur le serveur (qui à le rôle DHCP) nous voyons quand dans la plage 172.16.10.1 - 172.16.10.254, la 'sous-plage' 172.16.10.1 - 172.16.10.19' est exclue pour l'attribution des adresses, donc, notre client recevra la première adresse après cette plage d'exclusion. Ici 172.16.10.20.  
+![](https://github.com/Magicmaggio/Checkpoint-2/blob/main/ressources_images/Exercice%201/newaddhcp.jpg)
 
 
 ### Q1.6
