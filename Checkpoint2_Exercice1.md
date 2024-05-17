@@ -14,8 +14,9 @@ Ici, on obtient le nom du client dans les paramètres puis depuis le serveur on 
 ![](https://github.com/Magicmaggio/Checkpoint-2/blob/main/ressources_images/Exercice%201/Capture%20d%E2%80%99%C3%A9cran%202024-05-17%20105815.jpg)
 
 ### Q1.3
-On désactive l'IPv6 en graphique. On observe ensuite que le ping pas toujours mais cette fois-ci en s'adressant à l'adresse IPv4. Ce qui visiblement ne devrait pas être le cas...
+On désactive l'IPv6 en graphique. On observe ensuite que le ping pas toujours mais cette fois-ci en s'adressant à l'adresse IPv4. Ce qui visiblement ne devrait pas être le cas...  
 ![](https://github.com/Magicmaggio/Checkpoint-2/blob/main/ressources_images/Exercice%201/Capture%20d%E2%80%99%C3%A9cran%202024-05-17%20110014.jpg)
+![](https://github.com/Magicmaggio/Checkpoint-2/blob/main/ressources_images/Exercice%201/1.3.jpg)
 
 
 ### Q1.4
