@@ -1,3 +1,16 @@
+#Q 2.1
+Pour cela nous utilisons l'application du Bureau à distance native de Windows pour accèder sur notre réseau interne au serveur et en utilisant les identifiants Administrator de ce dernier.
+
+![](
+
+
+
+
+
+
+
+
+
 ## Code du script corrigé Main.ps1
 
 #Q2.2 Lors de l'exécution de script, nous en sortons directement. Il faut alors modifier ce qui suit *ArgumentList et écrire "C:\Scripts\AddLocalUsers.ps1" au lieu de "C:\Temp\AddLocalUsers.ps1". Le chemin n'étant pas le bon, il ne trouvait tout simplement pas le fichier du script
