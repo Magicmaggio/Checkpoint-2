@@ -9,7 +9,7 @@ Celle ci ne fonctionne pas car le serveur et le client ne sont pas sur le même 
 
 ### Q1.2
 Ici, on obtient le nom du client dans les paramètres puis depuis le serveur on exécute la commande ``ping <nomDuClient>`` (ici "Client1"). On observe que l'adresse IPv6 est utilisée ici.
-
+![](https://github.com/Magicmaggio/Checkpoint-2/blob/main/ressources_images/Exercice%201/Capture%20d%E2%80%99%C3%A9cran%202024-05-17%20105303.jpg)
 
 ### Q1.3
 On désactive l'IPv6 en graphique. On observe ensuite que le ping pas toujours mais cette fois-ci en s'adressant à l'adresse IPv4. Ce qui visiblement ne devrait pas être le cas...
