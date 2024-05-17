@@ -120,4 +120,5 @@ foreach ($User in $Users)
 
 pause
 Write-Host "--- Fin du script ---"
-Start-Sleep -Seconds 2 #10 sec beaucoup trop long
+#Q2.15 On remplace 10s par 2s
+Start-Sleep -Seconds 2 
