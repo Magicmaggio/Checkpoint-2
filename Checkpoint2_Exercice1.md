@@ -29,7 +29,7 @@ La toute première adresse du réseau est réservée pour l'adresse réseau. Ens
 
 ### Q1.6
 
-
+![](https://github.com/Magicmaggio/Checkpoint-2/blob/main/ressources_images/Exercice%201/resaclient1.jpg)
 
 ### Q1.7
 L'intérêt de passer le réseau en IPv6 est le fait que IPv6 intègre la configuration automatiques des adresses IP et donc facilite la gestion que l'on vient de réaliser.
