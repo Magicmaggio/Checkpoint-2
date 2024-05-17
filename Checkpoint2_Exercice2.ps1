@@ -1,7 +1,7 @@
 #Q 2.1
 Pour cela nous utilisons l'application du Bureau à distance native de Windows pour accèder sur notre réseau interne au serveur et en utilisant les identifiants Administrator de ce dernier.
 
-![](
+![](https://github.com/Magicmaggio/Checkpoint-2/blob/main/ressources_images/Exercice%201/Capture%20d%E2%80%99%C3%A9cran%202024-05-17%20124910.jpg)
 
 
 
